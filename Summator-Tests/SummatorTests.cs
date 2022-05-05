@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Summator_Project;
+using System;
 
 namespace Summator_Tests
 {
@@ -54,6 +55,12 @@ namespace Summator_Tests
             int actual = -3;
             Assert.AreEqual(expected, actual);
         }
-           }
-        
+        [Test]
+        public void Test_Average_DecimalNumberResult()
+        {
+            double expected = Summator.Average(new int[] { 5, 6 });
+            double actual = Math.Floor(5.5);
+            Assert.AreEqual(expected, actual);
+        }
+    }
 }
